@@ -1,0 +1,153 @@
+/* Users Section */
+.users-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+  }
+  
+  /* Section Title */
+  .users-section h2 {
+   margin-right: 5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  /* Title Underline */
+  .users-section h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #ff7eb3;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    padding: 12px;
+    width: 80%;
+    max-width: 400px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    outline: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .search-bar:focus {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+  
+  /* User Cards Grid */
+  .users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    padding: 30px 0;
+  }
+  
+  /* User Card  */
+  .user-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  /* Glow Effect on Hover */
+  .user-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Floating Avatar */
+  .user-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #ff7eb3;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Avatar Bounce on Hover */
+  .user-card:hover img {
+    transform: translateY(-5px);
+  }
+  
+  /* User Name */
+  .user-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  /* User Info */
+  .user-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+  }
+  
+  /* Social Icons */
+  .user-card .social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .user-card .social-icons a {
+    color: white;
+    font-size: 22px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .user-card .social-icons a:hover {
+    color: #ff7eb3;
+    transform: scale(1.2);
+  }
+  
+  /* Loading & Error Messages */
+  .loading, .error, .no-results {
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+  }
+  .error {
+    color: red;
+  }
+  .no-results {
+    color: lightgray;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .users-grid {
+      grid-template-columns: 1fr;
+    }
+  }
